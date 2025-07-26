@@ -39,10 +39,7 @@ InvoiceProcessor/
 │── invoices/ # 📂 Auto-downloaded PDFs
 │── invoices_log.xlsx # 📊 Excel log (auto-generated)
 │── invoices.db # 🗄 SQLite DB (auto-generated)
-
-
 ---
-
 ## 🔧 Setup Instructions
 
 ### 1️⃣ Clone or Download the Repository
@@ -72,22 +69,16 @@ EMAIL_PASS = "your_16_char_app_password"
 
 ▶️ How to Run
 ✅ Start the Automation
-
 python invoice_processor.py
 
 ✅ What happens:
-
 Connects to Gmail
-
 Downloads new invoice PDFs → saves them to invoices/
-
 Extracts invoice fields → saves them into Excel + SQLite
-
 Stop anytime with CTRL + C
 
 
 📄 View Saved Invoices
-
 python invoice_processor.py view
 
 Example output:
@@ -97,12 +88,8 @@ INV-001,2025-05-31,John Doe,"123 Main Street, City, Country"
 INV-002,2025-06-02,Jane Smith,"456 Market Road, LA, USA"
 
 🏗 Future Enhancements
-
 📊 Monthly summary reports
-
 📧 Email alerts for missing invoice fields
-
-🌐 Web dashboard integration
 
 👨‍💻 Author
 Praneeth– AI Student
