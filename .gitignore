@@ -1,0 +1,15 @@
+# Git ignore rules for Invoice Processor project 
+# Ignore downloaded invoices
+invoices/
+
+# Ignore database and Excel logs
+invoices.db
+invoices_log.xlsx
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore system files
+.DS_Store
+Thumbs.db
