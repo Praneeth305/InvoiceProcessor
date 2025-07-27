@@ -6,6 +6,13 @@ EXCEL_PATH = "invoices_log.xlsx"
 DB_FILE = "invoices.db"
 PROCESSED = set()
 
+
+# Delete old files each run (fresh start)
+for file in ["invoices_log.xlsx", "invoices.db"]:
+    if os.path.exists(file):
+        os.remove(file)
+        print(f"[🗑] Deleted old {file}")
+
 def save_to_excel(data):
     df = pd.DataFrame([data])
     if not os.path.exists(EXCEL_PATH):
