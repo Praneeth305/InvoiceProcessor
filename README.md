@@ -33,12 +33,12 @@ An all-in-one Python application that:
 ## 📂 Project Structure
 
 InvoiceProcessor/
-│── invoice_processor.py # 🚀 Main automation script
-│── README.md # 📘 This file
-│── requirements.txt # 📦 Required dependencies
-│── invoices/ # 📂 Auto-downloaded PDFs
-│── invoices_log.xlsx # 📊 Excel log (auto-generated)
-│── invoices.db # 🗄 SQLite DB (auto-generated)
+│── invoice_processor.py  🚀 Main automation script
+│── README.md  📘 This file
+│── requirements.txt  📦 Required dependencies
+│── invoices/  📂 Auto-downloaded PDFs
+│── invoices_log.xlsx  📊 Excel log (auto-generated)
+│── invoices.db  🗄 SQLite DB (auto-generated)
 --- 
 ## 🔧 Setup Instructions
 
