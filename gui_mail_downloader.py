@@ -15,9 +15,9 @@ def download_invoices(email_user, email_pass):
     email_ids = messages[0].split()
 
     if not email_ids:
-        status_label.set("No invoices found.")
+        status_label.set("No invoices found.")#praneeth0530@gmail.com
     else:
-        status_label.set(f"{len(email_ids)} invoices found.")
+        status_label.set(f"{len(email_ids)} invoices found.")#mxyl ugds tmal fndm
         for email_id in email_ids:
             _, msg_data = mail.fetch(email_id, "(RFC822)")
             raw_email = msg_data[0][1]
