@@ -39,7 +39,7 @@ InvoiceProcessor/
 │── invoices/ # 📂 Auto-downloaded PDFs
 │── invoices_log.xlsx # 📊 Excel log (auto-generated)
 │── invoices.db # 🗄 SQLite DB (auto-generated)
----
+--- 
 ## 🔧 Setup Instructions
 
 ### 1️⃣ Clone or Download the Repository
