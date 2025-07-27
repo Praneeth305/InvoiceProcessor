@@ -38,7 +38,7 @@ def download_invoices(email_user, email_pass):
                         print(f"Downloaded: {filename}")
     mail.logout()
 
-# ✅ GUI
+#  GUI
 root = Tk()
 root.title("Invoice Mail Downloader")
 
@@ -58,7 +58,7 @@ def trigger_download():
     pwd = password_entry.get()
     if user and pwd:
         download_invoices(user, pwd)
-        status_label.set("✅ Download complete.")
+        status_label.set("Download complete.")
 
 Button(root, text="Download Invoices", command=trigger_download).pack(pady=5)
 root.mainloop()

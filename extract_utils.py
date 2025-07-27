@@ -6,11 +6,11 @@ import os
 def extract_invoice_data(pdf_path):
     pairs = {}
 
-    # ✅ Read PDF text
+    # Read PDF text
     with pdfplumber.open(pdf_path) as pdf:
         text = "\n".join(page.extract_text() for page in pdf.pages if page.extract_text())
 
-    # ✅ Extract key:value pairs
+    # Extract key:value pairs
     lines = [line.strip() for line in text.split("\n") if ":" in line]
     for line in lines:
         if re.match(r".+?:\s*.+", line):
@@ -18,7 +18,7 @@ def extract_invoice_data(pdf_path):
             key_clean = re.sub(r"[^A-Za-z0-9 ]+", "", key).strip().lower()
             pairs[key_clean] = value.strip()
 
-    # ✅ Normalized output
+    # Normalized output
     normalized = {
         "invoice_number": None,
         "date": None,
@@ -37,7 +37,7 @@ def extract_invoice_data(pdf_path):
               "billto" in k or "billedto" in k or "customer" in k):
             normalized["billing_to"] = v
 
-    # ✅ Save raw extracted data for reference
+    # Save raw extracted data for reference
     csv_path = "invoices_data.csv"
     df = pd.DataFrame([pairs])
     write_header = not os.path.exists(csv_path)
