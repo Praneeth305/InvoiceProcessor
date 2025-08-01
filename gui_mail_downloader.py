@@ -11,13 +11,13 @@ def download_invoices(email_user, email_pass):
     mail.login(email_user, email_pass)
     mail.select("inbox")
 
-    status, messages = mail.search(None, '(SUBJECT "Invoice")')
-    email_ids = messages[0].split()
+    status, messages = mail.search(None, '(SUBJECT "Invoice")')     #praneeth0530@gmail.com
+    email_ids = messages[0].split()                                 #mxyl ugds tmal fndm
 
     if not email_ids:
-        status_label.set("No invoices found.")#praneeth0530@gmail.com
+        status_label.set("No invoices found.")  
     else:
-        status_label.set(f"{len(email_ids)} invoices found.")#mxyl ugds tmal fndm
+        status_label.set(f"{len(email_ids)} invoices found.")  
         for email_id in email_ids:
             _, msg_data = mail.fetch(email_id, "(RFC822)")
             raw_email = msg_data[0][1]
@@ -41,14 +41,15 @@ def download_invoices(email_user, email_pass):
 #  GUI
 root = Tk()
 root.title("Invoice Mail Downloader")
+root.geometry("400x250")  
 
-Label(root, text="Gmail:").pack()
-email_entry = Entry(root, width=30)
-email_entry.pack()
+Label(root, text="Gmail:").pack(pady=5)
+email_entry = Entry(root, width=35)
+email_entry.pack(pady=5)
 
-Label(root, text="App Password:").pack()
-password_entry = Entry(root, width=30, show="*")
-password_entry.pack()
+Label(root, text="App Password:").pack(pady=5)
+password_entry = Entry(root, width=35, show="*")
+password_entry.pack(pady=5)
 
 status_label = StringVar()
 Label(root, textvariable=status_label).pack(pady=10)
@@ -60,5 +61,6 @@ def trigger_download():
         download_invoices(user, pwd)
         status_label.set("Download complete.")
 
-Button(root, text="Download Invoices", command=trigger_download).pack(pady=5)
+Button(root, text="Download Invoices", command=trigger_download).pack(pady=10)
+
 root.mainloop()
