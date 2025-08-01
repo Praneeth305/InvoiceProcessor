@@ -84,7 +84,11 @@ python invoice_processor.py view
 Example output:
 
 invoicenumber,date,billedto,address
+
+
 INV-001,2025-05-31,John Doe,"123 Main Street, City, Country"
+
+
 INV-002,2025-06-02,Jane Smith,"456 Market Road, LA, USA"
 
 🏗 Future Enhancements
